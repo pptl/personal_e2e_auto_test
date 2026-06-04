@@ -1,0 +1,18 @@
+{
+  "name": "erp-e2e-personal",
+  "private": true,
+  "scripts": {
+    "smoke": "npx playwright test tests/smoke.spec.ts",
+    "test:login": "npx playwright test tests/login.spec.ts",
+    "test:scheduling": "npx playwright test tests/scheduling.spec.ts",
+    "test:leave": "npx playwright test tests/leave.spec.ts tests/leave-approve.spec.ts",
+    "test:all": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "report": "npx playwright show-report",
+    "codegen": "npx playwright codegen http://localhost:3000"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0"
+  }
+}
